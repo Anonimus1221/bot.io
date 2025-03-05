@@ -1,0 +1,104 @@
+.status-container {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.status-icon {
+    font-size: 1.2rem;
+    color: var(--bs-danger);
+    transition: color 0.3s ease;
+}
+
+.status-icon.status-active {
+    color: var(--bs-success);
+}
+
+#toggleButton {
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+#toggleButton:disabled {
+    opacity: 0.7;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    margin-bottom: 0;
+}
+/* Estilos generales */
+body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Estilos para el indicador de estado */
+.status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #313244;
+    border-radius: 8px;
+}
+
+.status-icon {
+    font-size: 16px;
+    color: #f38ba8; /* rojo por defecto (apagado) */
+}
+
+.status-icon.status-active {
+    color: #a6e3a1; /* verde (encendido) */
+}
+
+/* Estilos para botones y acciones */
+.btn-primary {
+    background-color: #89b4fa;
+    border-color: #89b4fa;
+}
+
+.btn-primary:hover {
+    background-color: #74c7ec;
+    border-color: #74c7ec;
+}
+
+.btn-success {
+    background-color: #a6e3a1;
+    border-color: #a6e3a1;
+}
+
+.btn-success:hover {
+    background-color: #94e2d5;
+    border-color: #94e2d5;
+}
+
+/* Animación para el indicador de estado encendido */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.status-active {
+    animation: pulse 2s infinite;
+}
